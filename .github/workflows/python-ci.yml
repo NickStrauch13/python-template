@@ -15,13 +15,13 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Install packages
-      run: make install         # install command in the Makefile
-
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: 3.x     # most up-to-date python version
+
+    - name: Install packages
+      run: make install         # install command in the Makefile
 
     - name: Lint
       run: make lint
