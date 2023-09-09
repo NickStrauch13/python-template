@@ -23,11 +23,11 @@ A general use Python template.
 GitHub Actions is used to run the Makefile in this order: `make install`, `make lint`, `make format`, `make test`.
 
 ``Makefile`` recipe results:
-<hr>
+***
 ![Alt text](img/install_result.png)
-<hr>
+***
 ![Alt text](img/lint_result.png)
-<hr>
+***
 ![Alt text](img/format_result.png)
-<hr>
+***
 ![Alt text](img/test_result.png)
