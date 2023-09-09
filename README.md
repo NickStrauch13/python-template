@@ -5,9 +5,9 @@ A general use Python template.
 [![Build Status](https://github.com/NickStrauch13/python-template/actions/workflows/python-ci.yml/badge.svg)](https://github.com/NickStrauch13/python-template/actions)
 
 ## About the template
-- Inside the ``.devcontainer`` directory, you'll find a Dockerfile and devcontainer.json. The Dockerfile outlines how to construct the container, while other settings in this directory may manage the development environment configuration.
+- Inside the ``.devcontainer`` directory, you'll find a Dockerfile and devcontainer.json. The Dockerfile outlines how to construct the container, while other settings in this directory manage the development environment configuration.
 
-- The ``workflows`` directory houses GitHub Actions configurations, enabling the setup of automated pipelines for building, testing, and deploying your project.
+- The ``.github/workflows`` directory houses GitHub Actions configurations, enabling the setup of automated pipelines for building, testing, and deploying your project.
 
 - The ``.gitignore`` file is utilized to specify which files or directories should be excluded from version control when utilizing Git.
 
@@ -16,3 +16,9 @@ A general use Python template.
 - The ``requirements.txt`` file is used to define the project's dependencies, including libraries and packages needed for its execution.
 
 - For testing purposes, there's a ``test_main.py`` file designed to work seamlessly in various Integrated Development Environments (IDEs).
+
+## GitHub Actions
+GitHub Actions is used to run the Makefile in this order: `make install`, `make test`, `make format`, `make lint`.
+
+``Makefile`` recipe results:
+
