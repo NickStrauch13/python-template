@@ -1,4 +1,4 @@
-# A Python Template
+# Python Template
 
 A general use Python template.
 
