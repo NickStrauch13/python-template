@@ -18,7 +18,7 @@ A general use Python template.
 - For testing purposes, there's a ``test_main.py`` file designed to work seamlessly in various Integrated Development Environments (IDEs).
 
 ## GitHub Actions
-GitHub Actions is used to run the Makefile in this order: `make install`, `make test`, `make format`, `make lint`.
+GitHub Actions is used to run the Makefile in this order: `make install`, `make lint`, `make format`, `make test`.
 
 ``Makefile`` recipe results:
 
