@@ -5,12 +5,11 @@ ARG VARIANT="3.10-bullseye"
 FROM mcr.microsoft.com/vscode/devcontainers/python:0-${VARIANT}
 
 # Define the path to the virtual environment
-ARG USER="codespace"
-ARG VENV_PATH="/home/${USER}/venv"
+ARG VENV_PATH="/home/vscode/venv"
 COPY requirements.txt /tmp/
 COPY Makefile /tmp/
-RUN su $USER -c "python -m venv ${VENV_PATH}" \
-    && su $USER -c "${VENV_PATH}/bin/pip --disable-pip-version-check --no-cache-dir install -r /tmp/requirements.txt" \
+RUN su vscode -c "python -m venv ${VENV_PATH}" \
+    && ${VENV_PATH}/bin/pip --disable-pip-version-check --no-cache-dir install -r /tmp/requirements.txt \
     && rm -rf /tmp/
 
 # [Optional] If your pip requirements rarely change, uncomment this section to add them to the image.
