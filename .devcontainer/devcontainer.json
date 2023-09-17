@@ -16,7 +16,7 @@
     "customizations": {
         "vscode": {
             "settings": {
-                "python.defaultInterpreterPath": "/home/codespace/venv/bin/python",
+                "python.defaultInterpreterPath": "/home/vscode/venv/bin/python",
                 "python.linting.enabled": true,
                 "python.linting.pylintEnabled": true,
                 "python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
