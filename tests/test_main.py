@@ -1,4 +1,4 @@
-from src.main import func
+#from src.main import func
 import sys
 print(sys.path)
 
