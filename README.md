@@ -7,6 +7,9 @@ A general use Python template.
 ## About the template
 - Inside the ``.devcontainer`` directory, you'll find a Dockerfile and devcontainer.json. The Dockerfile outlines how to construct the container, while other settings in this directory manage the development environment configuration.
 
+**Note:** Modify the python path to the appropriate repository name in the Dockerfile:
+![Alt text](img/path_line.png)
+
 - The ``.github/workflows`` directory houses GitHub Actions configurations, enabling the setup of automated pipelines for building, testing, and deploying your project.
 
 - The ``.gitignore`` file is utilized to specify which files or directories should be excluded from version control when utilizing Git.
