@@ -5,7 +5,7 @@ ARG VARIANT="3.10-bullseye"
 FROM mcr.microsoft.com/vscode/devcontainers/python:0-${VARIANT}
 
 # Define the path to the virtual environment
-ARG VENV_PATH="/home/codespace/venv"
+ARG VENV_PATH="/home/vscode/venv"
 COPY requirements.txt /tmp/
 COPY Makefile /tmp/
 RUN su vscode -c "python -m venv ${VENV_PATH}" \
