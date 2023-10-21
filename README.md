@@ -1,4 +1,4 @@
-[![Build Status](https://github.com/NickStrauch13/{{REPO_NAME}}/actions/workflows/python-ci.yml/badge.svg)](https://github.com/NickStrauch13/{{REPO_NAME}}/actions)
+[![Build Status](https://github.com/NickStrauch13/python-template/actions/workflows/python-ci.yml/badge.svg)](https://github.com/NickStrauch13/python-template/actions)
 
 # Python Template
 
