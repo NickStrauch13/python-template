@@ -5,13 +5,12 @@ ARG VARIANT="3.10-bullseye"
 FROM mcr.microsoft.com/vscode/devcontainers/python:0-${VARIANT}
 
 # Define the path to the virtual environment
-ARG USER="codespace"
-ARG VENV_PATH="/home/${USER}/venv"
+ARG VENV_PATH="/home/codespace/venv"
 COPY requirements.txt /tmp/
 COPY Makefile /tmp/
-RUN su $USER -c "/usr/bin/python3 -m venv /home/${USER}/venv" \
-   && su $USER -c "${VENV_PATH}/bin/pip --disable-pip-version-check --no-cache-dir install -r /tmp/requirements.txt" \
-   && rm -rf /tmp/requirements.txt 
+RUN su vscode -c "python -m venv ${VENV_PATH}" \
+    && ${VENV_PATH}/bin/pip --disable-pip-version-check --no-cache-dir install -r /tmp/requirements.txt \
+    && rm -rf /tmp/
 
-# Add the project directory to PYTHONPATH
+# Add the project directory to the PYTHONPATH
 ENV PYTHONPATH=/workspaces/python-template:${PYTHONPATH}
