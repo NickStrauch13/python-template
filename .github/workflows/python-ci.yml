@@ -21,7 +21,7 @@ jobs:
         python-version: 3.x     # most up-to-date python version
 
     - name: Install packages
-      run: make install         # install command in the Makefile
+      run: make install         
 
     - name: Lint
       run: make lint
